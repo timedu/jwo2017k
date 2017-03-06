@@ -1,0 +1,67 @@
+
+# Site settings
+
+title: JWO2017k # kurssitoteutuksen tunnus 
+baseurl: "/jwo2017k"
+
+kurssin_nimi: Johdatus web-ohjelmointiin
+
+discussion_address: "https://moodle2.tut.fi/mod/forum/discuss.php?d="
+upload_address: "https://moodle2.tut.fi/mod/vpl/view.php?id="
+review_address: "https://moodle2.tut.fi/mod/url/view.php?id=314337"
+
+# Build settings
+
+markdown: kramdown
+  
+collections:
+
+  osa1:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 1
+    otsikko: HTML, CSS
+    julkaisu: 8.3.2017
+    
+  osa2:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 2
+    otsikko: CSS Layout
+    julkaisu: 15.3.2017
+        
+  osa3:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 3
+    otsikko: "PHP" 
+    julkaisu: 22.3.2017
+            
+  osa4:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 4
+    otsikko: "PHP"
+    julkaisu: 29.3.2017
+            
+  osa5:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 5
+    otsikko: "PHP"
+    julkaisu: 5.4.2017
+    
+  osa6:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 6
+    otsikko: "JavaScript"
+    julkaisu: 19.4.2017
+        
+  osa7:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 7
+    otsikko: "JavaScript"
+    julkaisu: 26.4.2017
+
