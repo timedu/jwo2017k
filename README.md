@@ -1,2 +1,2 @@
-# tkj2017k
-Tietokantajärjestelmät, kevät 2017
+# jwo2017k
+Johdatus web-ohjelmointiin, kevät 2017
