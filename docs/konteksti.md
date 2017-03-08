@@ -16,3 +16,11 @@ permalink: /konteksti/index.html
 ~~~
 
 
+[Tietokantajärjestelmät][tkj]  
+[Web-selainohjelmointi][wso]  
+[Web-palvelinohjelmointi][wpo]  
+
+
+[tkj]: https://timedu.github.io/tkj2017k/
+[wso]: https://timedu.github.io/wso/
+[wpo]: http://web-palvelinohjelmointi.github.io

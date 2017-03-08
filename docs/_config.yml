@@ -20,48 +20,48 @@ collections:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 1
-    otsikko: HTML, CSS
+    otsikko: "HTML, CSS I"
     julkaisu: 8.3.2017
     
   osa2:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 2
-    otsikko: CSS Layout
+    otsikko: "CSS II, JavaScript"
     julkaisu: 15.3.2017
         
   osa3:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 3
-    otsikko: "PHP" 
+    otsikko: "PHP I" 
     julkaisu: 22.3.2017
             
   osa4:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 4
-    otsikko: "PHP"
+    otsikko: "PHP II"
     julkaisu: 29.3.2017
             
   osa5:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 5
-    otsikko: "PHP"
+    otsikko: "Soveltavat tehtävät I"
     julkaisu: 5.4.2017
     
   osa6:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 6
-    otsikko: "JavaScript"
+    otsikko: "Soveltavat tehtävät II"
     julkaisu: 19.4.2017
         
   osa7:
     output: true
     permalink: /:collection/:path/
     nimi: Osa 7
-    otsikko: "JavaScript"
+    otsikko: "Soveltavat tehtävät III"
     julkaisu: 26.4.2017
 

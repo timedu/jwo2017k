@@ -218,18 +218,29 @@
 
   <div class="post-content">
   
-    
+    <p><em>Web-ohjelmointi</em> on aihepiirinsä johdantokurssi, joka käsittelee ohjelmoijan näkökulmasta web-sovelluksissa käytettyjä perustekniikoita kuten HTML<sup id="fnref:HTML"><a href="#fn:HTML" class="footnote">1</a></sup>, CSS<sup id="fnref:CSS"><a href="#fn:CSS" class="footnote">2</a></sup>, <em>JavaScript</em>, PHP<sup id="fnref:PHP"><a href="#fn:PHP" class="footnote">3</a></sup> ja SQL<sup id="fnref:SQL"><a href="#fn:SQL" class="footnote">4</a></sup>. Kurssin keskeisiä työvälineitä ovat <a href="https://www.mozilla.org/fi/">Firefox</a> -selain ja integroitu sovelluskehitysympäristö, <a href="https://netbeans.org/">NetBeans IDE</a><sup id="fnref:IDE"><a href="#fn:IDE" class="footnote">5</a></sup>. Esillä olevia tekniikoita voidaan jäsentää oheisella kaaviolla.</p>
+
+<p><img src="img/vot_ark.png" alt="web-kaavio" title="web-kaavio" style="max-width: 500px; height: auto; display: block; margin: auto;" /></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Web_application">Web-sovellusten</a> käyttöliittymänä toimii <a href="https://en.wikipedia.org/wiki/Web_browser">selain</a>, joka tekee <a href="https://fi.wikipedia.org/wiki/HTTP">HTTP</a><sup id="fnref:HTTP"><a href="#fn:HTTP" class="footnote">6</a></sup>-muotoisia pyyntöjä <a href="https://fi.wikipedia.org/wiki/WWW-palvelin">web-palvelimelle</a> joko käyttäjän tai selaimen tulkitseman koodin ohjaamana. Tyypillinen vaste pyyntöön on <a href="https://fi.wikipedia.org/wiki/HTML">HTML</a> – dokumentti, joka voi sisältää myös <a href="https://fi.wikipedia.org/wiki/CSS">CSS</a> – määreitä ja <a href="https://fi.wikipedia.org/wiki/JavaScript">JavaScript</a> – koodia, joko suoraan tai viitteinä ulkopuolisiin tiedostoihin. <a href="https://fi.wikipedia.org/wiki/HTML">HTML</a> määrittelee dokumentin sisällön ja rakenteen <a href="https://fi.wikipedia.org/wiki/CSS">CSS</a>:n viimeistellessä dokumentin layoutin ja ulkoasun. <a href="https://fi.wikipedia.org/wiki/JavaScript">JavaScript</a> on selaimen tulkitsemaan ohjelmakoodia, joka voi muokata selaimen esittämää dokumenttia erityisen <a href="https://fi.wikipedia.org/wiki/Document_Object_Model">DOM</a><sup id="fnref:DOM"><a href="#fn:DOM" class="footnote">7</a></sup> – rajapinnan kautta. <a href="https://fi.wikipedia.org/wiki/JavaScript">JavaScript</a> osaa myös tehdä palvelimelle, tyypillisesti asynkronisia, <a href="https://fi.wikipedia.org/wiki/HTTP">HTTP</a> – pyyntöjä, mihin viitataan usein lyhenteellä <a href="https://fi.wikipedia.org/wiki/Ajax_%28ohjelmointi%29">Ajax</a><sup id="fnref:Ajax"><a href="#fn:Ajax" class="footnote">8</a></sup>.</p>
+
+<p>Selain voi pyynnössään viitata staattisen <a href="https://fi.wikipedia.org/wiki/HTML">HTML</a> – dokumentin sijaan myös palvelimella sijaitsevaan ohjelmaan, joka suoritetaan pyynnön seurauksena. Tällä kurssilla palvelinpään ohjelmointikielenä on <a href="https://fi.wikipedia.org/wiki/PHP">PHP</a>. Sovellukseen voi liittyä myös tietokanta – esim. pyynnön vasteen muodostaminen tietokannassa olevan tiedon perusteella. Usein käytössä on relaatiotietokanta, jota käsitellään <a href="https://fi.wikipedia.org/wiki/SQL">SQL</a>:n avulla. Tässä käytetään esimerkkinä <a href="https://www.sqlite.org">SQLite</a>-relaatiotietokantaa. Kurssilla käytettävä web-palvelin on integroitu IDE:en ja toisaalta PHP-tulkkiin.</p>
+
+<p>Kurssi on jaettu seitsemään osaan, joista kunkin ytimen muodostaa tiettyyn teemaan keskittyvä tehtäväsarja:</p>
+
 <ol>
-  <li><a href="osa1/">HTML, CSS</a></li>
-  <li><a href="osa2/">CSS Layout</a></li>
-  <li><a href="osa3/">PHP</a></li>
-  <li><a href="osa4/">PHP</a></li>
-  <li><a href="osa5/">PHP</a></li>
-  <li><a href="osa6/">JavaScript</a></li>
-  <li><a href="osa7/">JavaScript</a></li>
+  <li><a href="osa1/">HTML, CSS I</a></li>
+  <li><a href="osa2/">CSS II, JavaScript</a></li>
+  <li><a href="osa3/">PHP I</a></li>
+  <li><a href="osa4/">PHP II</a></li>
+  <li><a href="osa5/">Soveltavat tehtävät I</a></li>
+  <li><a href="osa6/">Soveltavat tehtävät II</a></li>
+  <li><a href="osa7/">Soveltavat tehtävät III</a></li>
 </ol>
 
-<h4 id="listietoja">Lisätietoja</h4>
+<p>Kahden ensimmäisen osan lähtökohtana on Helsingin yliopiston <a href="http://web-selainohjelmointi.github.io">Web-selainohjelmointi -kurssin</a> alkuosa (materiaalista luvut 2-5). Osat 3 ja 4 muodostaa <a href="https://www.viope.com/">Viope</a> -oppimisympäristön kurssi <em>PHP -ohjelmoinnin perusteet</em>. Osien 5-7 soveltavien tehtävien pääasiallisena lähteenä on Washintonin yliopiston <a href="https://courses.cs.washington.edu/courses/cse154/">Web Programming -kurssin</a> materiaali.</p>
+
+<h4 id="listietoja-kurssista">Lisätietoja kurssista</h4>
 
 <p><a href="konteksti">Kurssin konteksti</a> <br />
 <a href="arvostelu">Suorituksen arvostelu</a> <br />
@@ -239,6 +250,36 @@
 </code></pre>
 </div>
 
+<p><br /></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:HTML">
+      <p>HTML: Hypertext Markup Language <a href="#fnref:HTML" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:CSS">
+      <p>CSS: Cascading Style Sheets <a href="#fnref:CSS" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:PHP">
+      <p>PHP: PHP Hypertext Preprocessor <a href="#fnref:PHP" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:SQL">
+      <p>SQL: Structured Query Language <a href="#fnref:SQL" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:IDE">
+      <p>IDE: Integrated Development Environment <a href="#fnref:IDE" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:HTTP">
+      <p>HTTP: Hypertext Transfer Protocol <a href="#fnref:HTTP" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:DOM">
+      <p>DOM: Document Object Model <a href="#fnref:DOM" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:Ajax">
+      <p>Ajax: Asynchronous JavaScript And XML <a href="#fnref:Ajax" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
   
   </div>
