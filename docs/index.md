@@ -48,10 +48,14 @@ Kahden ensimmäisen osan lähtökohtana on Helsingin yliopiston [Web-selainohjel
 [viope]: https://www.viope.com/
 [cse154]: https://courses.cs.washington.edu/courses/cse154/
 
+Opintojaksolla ei ole varsinaista luento-opetusta. Kurssin osiin liittyvät tehtäväsarjat määrittelevät opiskeltavan aineksen. Osallistujien odotetaan tutustuvan tehtävien ratkaisua tukevaan taustamateriaalliin itsenäisesti. Kontaktitunnit on varattu ensisijaisesti tehtävien ratkaisemiseen. Kuhunkin kurssin osaan liittyy 3h kontaktitilaisuus, jonka yhteydessä saa tukea tehtävien ratkaisemiseen. Muita tukimuotoja ovat tehtäväkohtaiset Moodle-keskustelut ja tehtävissä laadittavaan koodiin liittyvät etäkatselmukset. Tentit tehdään EXAM-luokan koneissa, joissa on käytettävissä kehitysvälineistö sekä tukidokumentaatiota.
+
+
 #### Lisätietoja kurssista
 
-[Kurssin konteksti](konteksti)   
+[Tehtävien katselmointipyynnöt](katselmukset)   
 [Suorituksen arvostelu](arvostelu)   
+[Kurssin konteksti](konteksti)   
 [Edellinen kurssitoteutus](http://txp.avoinsatakunta.fi/weo/)   
 
 ~~~

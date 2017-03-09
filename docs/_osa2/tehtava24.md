@@ -1,6 +1,6 @@
 ---
 layout: exercise_page
-title: "Tehtävä 2.1: Elokuva-arvostelu (CSS)"
+title: "Tehtävä 2.4"
 exercise_template_name: 
 exercise_discussion_id: 
 exercise_upload_id: 
