@@ -53,8 +53,9 @@ Opintojaksolla ei ole varsinaista luento-opetusta. Kurssin osiin liittyvät teht
 
 #### Lisätietoja kurssista
 
-[Tehtävien katselmointipyynnöt](katselmukset)   
+[Aikataulu](aikataulu)   
 [Suorituksen arvostelu](arvostelu)   
+[Tehtävien katselmointipyynnöt](katselmukset)   
 [Kurssin konteksti](konteksti)   
 [Edellinen kurssitoteutus](http://txp.avoinsatakunta.fi/weo/)   
 
