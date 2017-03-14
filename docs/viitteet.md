@@ -15,7 +15,11 @@ site_menu: 1
 
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 [PHP](http://php.net)
+
+* [PHP-ohjelmointi](http://www.ohjelmointiputka.net/oppaat/opas.php?tunnus=php_01), Ohjelmointiputka.
 
 [SQLite][sqlite]  
 
@@ -26,9 +30,12 @@ site_menu: 1
 * [DB Browser for SQLite](http://sqlitebrowser.org)
 
 
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+Testeissä käytettyjä apuvälineitä
 
+* [QUnit](http://qunitjs.com)
+* [Sinon.JS](http://sinonjs.org)
+ 
 <https://developer.mozilla.org/en-US/docs/Web>
 
 
