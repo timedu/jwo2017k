@@ -46,7 +46,9 @@ Laadi tiedostoon `js/code.js` funktio `walkDOM` siten, että painonappia klikkaa
 
 *Listauksen 2* `p`-elementti rakentuu "*perus-mooc*" -elementin perusteella. `p`-elementin sisältönä on  "*perus-mooc*"-elementin nimi. `p`-elementtejä muodostuu yhteensä 23.
 
-Tehtävän ratkaisussa ei ole tarkoitus soveltaa `textContent`- eikä `innerHTML` -ominaisuuksia.
+Tehtävän ratkaisussa ei ole tarkoitus soveltaa `textContent`- eikä `innerHTML` -ominaisuuksia. Elementin nimi löytyy attribuutista [`tagName`][tagName].
+
+[tagName]: https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName
 
 **Palauta** tehtävän ratkaisuna tiedosto `code.js`. Varmista ennen palautusta, että tehtäväpohjassa oleva sivu `testaa.html` ei esitä virheilmoituksia. 
 
