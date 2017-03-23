@@ -27,3 +27,27 @@ Tukena voi halutessaan käyttää myös NetBeans IDE:ä, joka ohjaa tulosta synt
 
 NetBeans-projektille on kerrottava, minkälaista web-palvelinta käytetään sovellusta ajettaessa IDE:stä käsin. Jos tukeudutaan PHP-tulkin sisältämään palvelimeen, valinta on *PHP Built-in Web Server*. NetBeansin on myös tiedettävä, missä PHP-tulkki sijaitsee kehityslaitteessa. Luokkakoneissa sen polkunimi on `C:\Apps\PHP\PHP5.6\php.exe`. Omaan Windows-kehitysympäristöön tulkin voi ladata osoitteesta <http://windows.php.net/download>.
 
+### Lisätietoja
+
+Kattava esitys PHP:stä on sen [käsikirjasta][manual]. Myös W3Schools-sivustolla aiheesta on oma [osionsa][w3schools-php]. Ohjelmointiputkasta löytyy suomenkielinen [PHP-opas][putka-php].
+
+[manual]: http://php.net/manual/en/
+[w3schools-php]: https://www.w3schools.com/php/default.asp
+[putka-php]: http://www.ohjelmointiputka.net/oppaat/opas.php?tunnus=php_01
+
+Jos PHP-sovelluksia laatii NetBeansilla, niin seuraavaa funktiota voidaan käyttää virheiden jäljityksessä: 
+
+{% highlight php %}
+
+    <?php
+    function debug($data) {
+        error_log(print_r($data, TRUE));
+    }
+
+{% endhighlight %}
+
+Funktio tulostaa parametrinsa NetBeansin *Output*-ikunaan. Rakenteinenkin muuttaja saadaan tällä esille luettavassa muodossa.
+
+
+
+
