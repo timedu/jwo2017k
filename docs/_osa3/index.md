@@ -11,6 +11,14 @@ Tämän osa aineisto löytyy Viope-oppimisympäristön kurssilta *PHP-ohjelmoinn
 
 [viope]: https://moodle2.tut.fi/mod/url/view.php?id=315284
 
+<hr/>
+<small>
+[Tehtäväpohjat](https://moodle2.tut.fi/mod/folder/view.php?id=317111) &nbsp;
+[Keskustelu](https://moodle2.tut.fi/mod/forum/view.php?id=317112) &nbsp;
+[Katselmointipyyntö](https://moodle2.tut.fi/mod/url/view.php?id=314337) &nbsp;
+[Palautus katselmointiin](https://moodle2.tut.fi/mod/vpl/view.php?id=317152)
+</small>
+
 ### Tehtävät
 
 Osa sisältää 15 lyhyttä ohjelmointitehtävää, jotka ovat pisteytyksen näkökulmasta keskenään samanarvoisia. Viopen kurssi on avoinna tehtävien ratkaisemista varten 31.3.2017 asti. Luontevinta lienee ratkaista tehtävät Viopen omalla editorilla. Viope myös testaa ratkaisut automaattisesti.
