@@ -15,7 +15,7 @@ site_menu: 1
 
 * [HTML Tutorial](https://www.w3schools.com/html/default.asp). W3Shools.
 * [HTML](https://www.w3.org/html/). W3C.
-* [HTML currenr status](https://www.w3.org/standards/techs/html#w3c_all). W3C. 
+* [HTML current status](https://www.w3.org/standards/techs/html#w3c_all). W3C. 
 * [Markup Validation Service](http://validator.w3.org). W3C. 
 * [HTML Living Standard](https://html.spec.whatwg.org/multipage/).
 
@@ -23,7 +23,7 @@ site_menu: 1
 
 * [CSS Tutorial](https://www.w3schools.com/css/default.asp). W3Shools.
 * [Cascading Style Sheets](https://www.w3.org/Style/CSS/). W3C.
-* [CSS currenr status](https://www.w3.org/standards/techs/css#w3c_all). W3C. 
+* [CSS current status](https://www.w3.org/standards/techs/css#w3c_all). W3C. 
 * [CSS Validation Service](https://jigsaw.w3.org/css-validator/validator.html.en). W3C.
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -32,6 +32,7 @@ site_menu: 1
 * [ECMAScript Language Specification](https://tc39.github.io/ecma262/).
 * [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model). MDN.
 * [Document Object Model (DOM)](https://www.w3.org/DOM/). W3C.
+* [Eloquent JavaScript](http://eloquentjavascript.net).
 
 [PHP](http://php.net)
 
@@ -63,5 +64,6 @@ Testeissä käytettyjä apuvälineitä
 * <http://appro.mit.jyu.fi/web-sovellukset/>
 * <https://plus.cs.tut.fi/seitti/S2017/> 
 * <https://developer.mozilla.org/en-US/docs/Tools>
+* <http://cs.uccs.edu/~rsebesta/>
 
 
