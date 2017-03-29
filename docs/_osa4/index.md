@@ -1,7 +1,6 @@
 ---
 layout: collection_index
 permalink: /:collection/index.html
-kesken: 1
 ---
 
 
@@ -20,4 +19,10 @@ Opintojakson tämä osa jatkaa [PHP][PHP]-teemaa, ja [edellisen osan](../osa3) t
 </small>
 
 ### Tehtävät
+
+Osa sisältää 10 tehtävää [Viope][viope]-materiaalin luvuista 7-9. Kaikkien tehtävien ratkaisu tuottaa yhteensä 22 pistettä. Enimmäissuoritukseen kuitenkin riittää 15 Viopen myöntämää pistettä, mikä saavutetaan valituista tehtävistä riippuen joko 7 tai 8 tehtävän ratkaisulla. [Viopen kurssi][viope] on avoinna tehtävien ratkaisemista varten 7.4.2017 asti[^2].
+
+[^2]: Kurssi on suljettuna lauantaina 1.4. n. klo 12:00 asti.
+
+<br/>
 
