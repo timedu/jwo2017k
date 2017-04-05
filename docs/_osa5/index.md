@@ -3,7 +3,7 @@ layout: collection_index
 permalink: /:collection/index.html
 ---
 
-Opintojakson tässä osassa ratkaistaan edellisiin verrattuna hieman laajempi ongelma.  Rakennettava sovellus esittää web-sivulla elokuvista laadittuja arvosteluja. Esitettävät tiedot on talletettu tiedostoihin, joista ne luetaan PHP:n avulla osaksi muodostettavaa sivua. Sivun ulkosu viimeistellään CSS:n avulla. Selaimeen tuotoksesta muodostuu [oheisen kuvan][vaihe4a2] kaltainen näkymä. 
+Opintojakson tässä osassa ratkaistaan edellisiin verrattuna hieman laajempi ongelma.  Rakennettava sovellus esittää web-sivulla elokuvista laadittuja arvosteluja. Esitettävät tiedot on talletettu tiedostoihin, joista ne luetaan PHP:n avulla osaksi muodostettavaa sivua. Sivun ulkoasu viimeistellään CSS:n avulla. Selaimeen tuotoksesta muodostuu [oheisen kuvan][vaihe4a2] kaltainen näkymä. 
 
 [vaihe4a2]: https://moodle2.tut.fi/mod/resource/view.php?id=318754
 
