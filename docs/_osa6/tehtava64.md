@@ -2,10 +2,12 @@
 layout: exercise_page
 title: "Tehtävä 6.4: Liukupalapeli, vaihe 2"
 exercise_template_name: 
-exercise_discussion_id: 
+exercise_discussion_id: 80864
 exercise_upload_id: 
 kesken: 1
 ---
+
+Laadi [spesifikaation][speksi] kuvaama lisäpiirre #1 ... 
 
 Tehtävän [lähteenä käytetty spesifikaatio][speksi] löytyy Moodlesta.
 

@@ -2,7 +2,7 @@
 layout: exercise_page
 title: "Tehtävä 6.1: Ascii-animaatio, vaihe 1"
 exercise_template_name: W6E01.AsciiAnimaatioVaihe1
-exercise_discussion_id: 
+exercise_discussion_id: 80861
 exercise_upload_id: 
 ---
 
