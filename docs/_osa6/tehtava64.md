@@ -1,9 +1,8 @@
 ---
 layout: exercise_page
-title: "Tehtävä 6.3: Liukupalapeli, vaihe 1"
+title: "Tehtävä 6.4: Liukupalapeli, vaihe 2"
 exercise_template_name: 
 exercise_discussion_id: 
 exercise_upload_id: 
 kesken: 1
 ---
-
