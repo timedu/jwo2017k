@@ -1,9 +1,9 @@
 ---
 layout: exercise_page
-title: "Tehtävä 6.3: Liukupalapeli, vaihe 1"
+title: "Tehtävä 6.3: Liukupalapeli (8p)"
 exercise_template_name: W6E03.LiukupalapeliVaihe1
 exercise_discussion_id: 80863
-exercise_upload_id: 
+exercise_upload_id: 319710
 ---
 
 > The Fifteen Puzzle (also called the Sliding Puzzle) is a simple classic game consisting of a 4×4 grid of numbered squares with one square missing. The object of the game is to arrange the tiles into numerical order by repeatedly sliding a square that neighbors the missing square into its empty space.

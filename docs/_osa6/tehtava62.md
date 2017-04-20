@@ -1,9 +1,9 @@
 ---
 layout: exercise_page
-title: "Tehtävä 6.2: Ascii-animaatio, vaihe 2"
+title: "Tehtävä 6.2: Ascii-animaatio, vaihe 2 (2p)"
 exercise_template_name: W6E02.AsciiAnimaatioVaihe2
 exercise_discussion_id: 80862
-exercise_upload_id: 
+exercise_upload_id: 319709
 ---
 
 Täydennä [tehtävän 6.1](../tehtava61) ratkaisua siten, että animaation saa pyörimään myös  taasepäin, sekä niin, että tekstialueen fontin koon voi antaa ennalta määriteltyjen arvojen ohella myös suoraan lukuarvona.

@@ -1,9 +1,9 @@
 ---
 layout: exercise_page
-title: "Tehtävä 6.1: Ascii-animaatio, vaihe 1"
+title: "Tehtävä 6.1: Ascii-animaatio, vaihe 1 (5p)"
 exercise_template_name: W6E01.AsciiAnimaatioVaihe1
 exercise_discussion_id: 80861
-exercise_upload_id: 
+exercise_upload_id: 319707
 ---
 
 Laadi selaimessa toimiva ascii-animaatioiden katselusovellus. Tehtäväpohjassa on sovelluksen html/css-käyttöliittymä, jota täydennnetään JavaScript-koodilla halutun toiminnallisuuden aikaansaamiseksi. Pohja sisältää myös joukon valmiita animaatioita.
