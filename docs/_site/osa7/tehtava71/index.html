@@ -14,11 +14,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>JWO2017k:Tehtävä 7.1: </title>
+  <title>JWO2017k:Tehtävä 7.1: tehtävälista, files</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="/jwo2017k/img/favicon-ico.ico" />
 
-  <meta name="description" content="">
+  <meta name="description" content="Rakenna tehtävälista-sovellus täydentämällä oheista NetBeans-projektirunkoa1. Seuraava kaavio esittää joukon sovelluksen moduuleista, joista tässä laaditaan ...">
 
   <link rel="stylesheet" href="/jwo2017k/css/main.css">
   
@@ -169,6 +169,18 @@
       
       
         
+  
+      
+      
+        
+  
+      
+      
+        
+  
+      
+      
+        
                   
           <a class="page-link" href="/jwo2017k/viitteet/">
           
@@ -198,12 +210,6 @@
      
       <div class="wrapper">  
 
-        
-                 
-            
-<figure class="highlight"><pre><code class="language-html" data-lang="html">sivu julkaistaan 26.4.2017 mennessä</code></pre></figure>
- 
-                                          
           
                       
         
@@ -229,7 +235,7 @@
 
  
 &nbsp;                                           
-<a class="page-link" href="https://moodle2.tut.fi/mod/url/view.php?id=314337">Katselmointi</a> 
+<a class="page-link" href="https://moodle2.tut.fi/mod/url/view.php?id=314337">Katselmointipyyntö</a> 
        
       
       
@@ -243,13 +249,64 @@
             
     </nav>      
     
-    <h1>Tehtävä 7.1: </h1>
+    <h1>Tehtävä 7.1: Tehtävälista, Files</h1>
     
   </header>
 
   <div class="post-content">
   
-    
+    <p>Rakenna tehtävälista-sovellus täydentämällä oheista <a href="https://moodle2.tut.fi/mod/resource/view.php?id=320530">NetBeans-projektirunkoa</a><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Seuraava kaavio esittää joukon sovelluksen moduuleista, joista tässä laaditaan <code class="highlighter-rouge">prepareStart.php</code>, <code class="highlighter-rouge">prepareTodolist.php</code>, <code class="highlighter-rouge">doInsert.php</code> ja <code class="highlighter-rouge">doDelete.php</code>. Muut moduulit ovat pohjassa valmiina. Keskeisiä tehtävässä esille tulevia asioita ovat <em>tiedostokäsittely</em>, <em>istunnot</em> ja <em>evästeet</em>.</p>
+
+<p><img src="../img/part7-ex7.1.png" alt="Moduulikaavio" title="Moduulikaavio" style="display: block; margin: auto; margin-top: 10px;" /></p>
+
+<p><small>Kuva 1.</small></p>
+
+<p>Sovelluksen käyttöliittymä muodostuu kahdesta sivusta, <a href="https://moodle2.tut.fi/mod/resource/view.php?id=320528"><code class="highlighter-rouge">start.php</code></a> ja <a href="https://moodle2.tut.fi/mod/resource/view.php?id=320527"><code class="highlighter-rouge">todolist.php</code></a>. <em>Start</em>-sivulla kirjaudutaan sovellukseen ja <em>Todolist</em>-sivun kautta lisätään ja poistetaan tehtäviä.</p>
+
+<p>Käyttäjä suorittaa kirjautumisen syöttämällä käyttäjätunnuksen ja salasanan <em>Start</em>- sivulla oleviin tekstikenttiin, ja klikkaamalla sen jälkeen kenttien alapuolella olevaa painonappia. Jos annettu käyttäjätunnus on sovelluksen tiedossa, sovellus tuo käyttäjälle esiin <em>Todolist</em> -sivun, jos annettu salasana täsmää rekisteröityyn salasanaan. Jos käyttäjätunnus -kenttään syötettyä tunnusta ei ole vielä rekisteröity, rekisteröi sovellus uuden käyttäjän ja tuo esiin <em>Todolist</em> -sivun edellyttäen, että salasanakenttään syötetty merkkijono on oikeaa muotoa. Jos kirjautuminen ei onnistu, <em>Start</em>-sivulle ilmestyy ongelmaa kuvaava virheilmoitus.</p>
+
+<p><em>Todolist</em> -sivun kautta voidaan suorittaa uuden tehtävän lisääminen ja olemassa olevan tehtävän poistaminen sekä uloskirjautuminen sovelluksesta. Tehtävää ei lisätä, jos sille ei ole annettu tekstiä.</p>
+
+<h4 id="tiedostot-sek-istuntoon-ja-evsteeseen-talletettavat-tiedot">Tiedostot sekä istuntoon ja evästeeseen talletettavat tiedot</h4>
+
+<p>Käyttäjätunnukset ja salasanat ovat tiedostossa <code class="highlighter-rouge">data/users.txt</code> ja käyttäjäkohtaiset tehtävälistat tiedostoissa <code class="highlighter-rouge">data/todo_&lt;user&gt;.txt</code><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Kirjautuneen käyttäjän tunnus on <em>istunnossa</em> avaimella <code class="highlighter-rouge">user</code>. Viimeisin kirjautumisaika on <em>evästeessä</em> avaimella <code class="highlighter-rouge">last_login</code>. Kirjautumiseen liittyvät virheilmoitukset välitetään <em>istunnossa</em> avaimella <code class="highlighter-rouge">message</code>.</p>
+
+<h4 id="laadittavista-moduuleista">Laadittavista moduuleista</h4>
+
+<p><em>Start</em>-sivu ottaa käyttöönsä moduulin <code class="highlighter-rouge">php/prepareStart.php</code>. Sivu viittaa muutuujiin <code class="highlighter-rouge">$last_login</code> ja <code class="highlighter-rouge">$message</code> (viimeinen kirjautumisaika ja mahdollinen virhelimoitus), jotka <em>prepareStart</em> asettaa.  <em>prepareStart</em> myös ohjaa käsittelyn suoraan <em>Todolist</em>-sivulle, jos käyttäjä on jo kirjautuneena, sekä poistaa istunnosta mahdollisen virheilmoituksen.</p>
+
+<p><em>Todolist</em>-sivu ottaa käyttöönsä moduulin <code class="highlighter-rouge">php/prepareTodolist.php</code>. Sivu viittaa muutuujiin <code class="highlighter-rouge">$last_login</code>, <code class="highlighter-rouge">$user</code> ja <code class="highlighter-rouge">$items</code> (viimeinen kirjautumisaika, kirjautunut käyttäjä sekä käyttäjän tehtävälistan tehtävät), jotka <em>prepareTodolist</em> asettaa.  <em>prepareTodolist</em> myös ohjaa käsittelyn <em>Start</em>-sivulle, jos käyttäjää ei ole kirjautuneena.</p>
+
+<p>Moduuli <code class="highlighter-rouge">php/doInsert.php</code> lisää kirjautuneen käyttäjän tehtävälistaan <em>Todolist</em>-sivun välittämän uuden tehtävän sekä ohjaa käsittelyn takaisin <em>Todolist</em>-sivulle. Moduuli <code class="highlighter-rouge">php/doDelete.php</code> poistaa kirjautuneen käyttäjän tehtävälistasta  tehtävän, jonka indeksin <em>Todolist</em>-sivu välittää sekä ohjaa käsittelyn takaisin <em>Todolist</em>-sivulle. Jos näihin moduuleihin kohdistuu pyyntö siten, että käyttäjää ei ole kirjautuneena, moduulit ohjaavat käsittelyn <em>Start</em>-sivulle.</p>
+
+<p><strong>Palauta</strong> tehtävän ratkaisuna tiedostot <code class="highlighter-rouge">prepareStart.php</code>, <code class="highlighter-rouge">prepareTodolist.php</code>, <code class="highlighter-rouge">doInsert.php</code> ja <code class="highlighter-rouge">doDelete.php</code>.</p>
+
+<h3 id="vihjeit-ja-listietoja">Vihjeitä ja lisätietoja</h3>
+
+<p><code class="highlighter-rouge">php</code>-kansiossa olevat moduulit ottavat käyttöönsä moduulin <code class="highlighter-rouge">php/commonCode.php</code>, joka käynnistää istunnon. Moduuli sisältää myös funktiot <code class="highlighter-rouge">redirect_to</code>, jolla voidaa ohjata käsittely toiselle sivulle, sekä <code class="highlighter-rouge">debug</code>, jolla voidaan tulostaa tietoja NetBeansin <em>Output</em>-ikkunaan.</p>
+
+<p><em>Istunnoista</em> ja <em>evästeista</em> löytyy tiivis esitys esim. Ohjelmointiputkan <a href="https://www.ohjelmointiputka.net/oppaat/opas.php?tunnus=php_11">PHP-oppaasta</a>. Tehtäväpohjan moduuli <code class="highlighter-rouge">php/doLogin.php</code> tallettaa arvoja istuntoon sekä asettaa evästeen.</p>
+
+<p>Tarvittava tiedostokäsittely sujunee jouhevimmin käyttäen funktioita <a href="http://php.net/manual/en/function.file.php">file</a> ja
+<a href="http://php.net/manual/en/function.file-put-contents.php">file_put_contents</a>. Funktiota <a href="http://php.net/manual/en/function.file-exists.php">file_exists</a> käyttämällä vältyttäneen tietyistä virheilmoituksista. Funkioiden käytöstä löytyy esimerkkejä esim. Ohjelmointiputkan <a href="https://www.ohjelmointiputka.net/oppaat/opas.php?tunnus=php_09">materiaalista</a> ja tehtäväpohjan moduulista <code class="highlighter-rouge">php/doLogin.php</code>.</p>
+
+<p><br /><small>
+Tehtävän lähteet: Homeworks <a href="https://moodle2.tut.fi/mod/resource/view.php?id=320576">To-Do List</a> &amp; <a href="https://moodle2.tut.fi/mod/resource/view.php?id=320577">To-Do List Extra Features</a>.<br /> 
+<a href="https://courses.cs.washington.edu/courses/cse154/">Web Programming</a>, University of Washington, Computer Science &amp; Engineering.<br />
+Copyright © Marty Stepp / Jessica Miller, licensed under Creative Commons Attribution 2.5 License.
+</small></p>
+
+<p><br /></p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Tässä tehtävässä projektirunko on Moodlessa. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Tehtäväpohjassa on esimerkit tiedostoista. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
     
   </div>
