@@ -1,9 +1,9 @@
 ---
 layout: exercise_page
-title: "Tehtävä 7.2: Tehtävälista, SQL"
+title: "Tehtävä 7.2: Tehtävälista, SQL (5p)"
 exercise_template_name: 
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 81426
+exercise_upload_id: 320612
 ---
 
 Laadi [oheista projektipohjaa][pohja] täydentämällä [edellisen tehtävän](../tehtava71) kanssa samanlainen tehtävälista-sovellus kuitenkin niin, että tehtävälistat talletetaan tiedostojen sijaan *relaatiotietokantaan*. Ratkaisussa tietokantaa käsitteleviä ja tässä rakennettavia moduuleja ovat `prepareTodolist.php`, `doInsert.php` ja `doDelete.php`. Moduulin `prepareStart.php` voi kopioida sellaisenaan edellisen tehtävän ratkaisusta.
@@ -171,6 +171,9 @@ Esimerkkejä löytyy myös PHP:n [PDO-käsikirjasta][pdoman] eri metodien käsit
 [PDO]: http://php.net/manual/en/class.pdo.php
 [PDOStatement]: http://php.net/manual/en/class.pdostatement.php
 [PDOException]: http://php.net/manual/en/class.pdoexception.php
+
+
+*SQLite*-tietokantaa voidaan käsitellä sovellusohjelmien ohella erilaisilla hallintatyökaluilla. Eräs tällainen työkalu on Firefoxin lisäosa [SQLite Manager](https://addons.mozilla.org/fi/firefox/addon/sqlite-manager/).
 
 
 

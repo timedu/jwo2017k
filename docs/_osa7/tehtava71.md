@@ -1,9 +1,9 @@
 ---
 layout: exercise_page
-title: "Tehtävä 7.1: Tehtävälista, Files"
+title: "Tehtävä 7.1: Tehtävälista, Files (5p)"
 exercise_template_name: 
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 81424
+exercise_upload_id: 320611
 ---
 
 Rakenna tehtävälista-sovellus täydentämällä oheista [NetBeans-projektirunkoa][pohja][^1]. Seuraava kaavio esittää joukon sovelluksen moduuleista, joista tässä laaditaan `prepareStart.php`, `prepareTodolist.php`, `doInsert.php` ja `doDelete.php`. Muut moduulit ovat pohjassa valmiina. Keskeisiä tehtävässä esille tulevia asioita ovat *tiedostokäsittely*, *istunnot* ja *evästeet*.

@@ -1,11 +1,9 @@
 ---
 layout: exercise_page
-title: "Tehtävä 7.3: Tehtävälista, Ajax"
+title: "Tehtävä 7.3: Tehtävälista, Ajax (5p)"
 exercise_template_name: 
-exercise_discussion_id: 
-exercise_upload_id: 
-kesken: 1
-julkaisu: 27.5.2017
+exercise_discussion_id: 81427
+exercise_upload_id: 320614
 ---
 
 Laadi [oheista projektipohjaa][pohja] täydentämällä [edellisen tehtävän](../tehtava72) kanssa samanlainen tehtävälista-sovellus kuitenkin niin, että *Todolist* -sivua ei ladata selaimeen uudelleen tehtävän lisäyksen ja poiston jälkeen. Ratkaisussa tieto tehtävälistan muutoksista välitetään palvelimelle JavaScriptin avulla. Tietokantaan tehdyn päivityksen jälkeen JavaScript myös muokkaa selaimessa olevaa dokumenttia vastaamaan tietokannan uutta tilaa. Seuraava kaavio esittää sovelluksen osaa, joka on erilainen verrattuna [tehtävään 7.2](../tehtava72).
@@ -21,12 +19,15 @@ Ratkaisussa *Todolist*-sivu ottaa käyttöönsä moduulin `prepareTodolist.php` 
 
 Tehtävän lisäyksen tehtävälistaan toteuttaa funktio `doInsert` palvelun `doInsert.php` tuella. Palvelu palauttaa funktiolle tietokantaan lisäämänsä tehtävän (ml. tietokantatunnus), jota vastaavat elementit funktio rakentaa selaimessa olevaan dokumenttiin. Tehtävän poiston tietokannasta toteuttaa funktio `doDelete` palvelun `doDelete.php` tuella. Funktio myös poistaa vastaavat elementit selaimessa olevasta dokumentista.
 
-*Kuvassa 1* esiintyvä funktio `doLogout` ja palvelu `doLogout.php` ovat projektipohjassa valmiina.
+*Kuvassa 1* esiintyvä funktio `doLogout` ja palvelu `doLogout.php` ovat projektipohjassa valmiina. Tässä rakennettavista moduuleista pohja sisältää rungot siten, että sovellus toimii esittäen vakiotietoja. Edellissä tehtävässä laaditusta tietokantakäsittelystä on tässä paljon hyötyä.
 
 **Palauta** tehtävän ratkaisuna tiedostot `doSelect.php`, `doInsert.php`, `doDelete.php` ja `todolist.js`.
 
 
 ### Vihjeitä ja lisätietoja
+
+
+Ohessa on [esimerkki](http://timedu.github.io/weo2016k/form2xhr/), miten JavaScriptin `XMLHttpRequest`-objektin avulla välitetään tietoa palvelimelle. Tässä tehtävässä tiedot kannattanee välittää siinä muodossa, missä POST-metodilla lähetetyn lomakeenkin data välittyy palvelimelle (`application/x-www-form-urlencoded`).  Web-selainohjelmointi -materiaalissa aihetta käsitellään luvussa [7. Keskustelu palvelimen kanssa](http://web-selainohjelmointi.github.io/#7-Keskustelu-palvelimen-kanssa).
 
 
 <br/><small>
