@@ -26,6 +26,12 @@ Tehtävän lisäyksen tehtävälistaan toteuttaa funktio `doInsert` palvelun `do
 
 ### Vihjeitä ja lisätietoja
 
+* logout -toiminto
+* Tehtäväluettelon luku tietokannnasta
+* Uuden tehtävän talletus käyttäjän tehtäväluetteloon
+* Esimerkkeja XMLHttpRequest -objektin käytöstä
+* reply -funktion revisio
+
 
 #### logout -toiminto
 
@@ -88,13 +94,14 @@ Palvelimelta pyyntöön saatava vaste löytyy `XMLHttpRequest` -objektin `respon
 
 
 [^2]: Ks. esim. kohta [JSON][sec71] Web-selainohjelmointi -materiaalista.
-
 [sec71]: http://web-selainohjelmointi.github.io/#7.1-JSON
 
 
-*Listauksessa 3* on *listauksen 2* esittämän `doLogout` -funktion tekemän pyynnön käsittelijä, `doLogout.php`, joka poistaa kaikki istuntoon liittyvän datan ja tulostaa json-muotoisen merkkijonon `'{"ok": true}'`.  Merkkijonon lähtökohta on tässä PHP:ssä tyypillinen merkkijonoilla indeksoitu taulukko, joka muunnetaan JSON -muotoon funktiolla [json_encode][json_encode] (*listaus  4*).
+*Listauksessa 2* esitetty `doLogout` -funktiossa oleva  [preventDefault][event_preventdefault] -metodin kutsu estää linkin klikkauksen oletuskäyttäytymisen so. linkin seuraamisen. [location][obj_location] -objektin avulla voidaa ladata selaimeen uusi dokumentti. Näitä ei tarvita tietokantakäsittelyyn liittyvien toimintojen yhteydessä.
 
-[json_encode]: http://php.net/manual/en/function.json-encode.php
+
+[event_preventdefault]: https://www.w3schools.com/jsref/event_preventdefault.asp
+[obj_location]: https://www.w3schools.com/jsref/obj_location.asp
 
 
 {% highlight php %}
@@ -113,6 +120,11 @@ reply(['ok' => TRUE]);
 
 <small>Listaus 3. *doLogout.php*</small>
 
+
+*Listauksessa 3* on *listauksen 2* esittämän `doLogout` -funktion tekemän pyynnön käsittelijä, `doLogout.php`, joka poistaa kaikki istuntoon liittyvän datan ja tulostaa json-muotoisen merkkijonon `'{"ok": true}'`.  Merkkijonon lähtökohta on tässä PHP:ssä tyypillinen merkkijonoilla indeksoitu taulukko, joka muunnetaan JSON -muotoon funktiolla [json_encode][json_encode] (*listaus  4*).
+
+
+[json_encode]: http://php.net/manual/en/function.json-encode.php
 
 
 {% highlight php %}
@@ -143,6 +155,22 @@ Tietokannasta luettu tehtäväluettelo esitetään *Todolist*  -sivulla. [Tehtä
 <small>Kuva 1. Todolist -sivun pyyntö palvelimelle</small>
 
 
+Tehtäväluettelon haun toteuttaa JavaScript-funktio `doSelect` tekemällä palvelimelle pyynnön, jonka käsittelee `doSelect.php`.  [Edellisen tehtävän](../tehtava72) moduuliin `prepareTodolist.php` sisältyvä tietokantakäsittely siis siirtyy tässä moduuliin `doSelect.php`. Funktio `doSelect` on sidottu [window][obj_window] -objektin `load` -tapahtumaa so. funktio suoritetaan, kun dokumentti on ladattu selaimeen.
+
+
+[obj_window]: https://www.w3schools.com/jsref/obj_window.asp
+
+
+Pohjakoodissa oleva `doSelect` -funktio (*Listaus 5*) muodostaa sivulle vakiotietietoihin perustuvia elementtejä. Muuttujassa `items` on [JSON][js_json]-merkkijono, jonka muoto vastaa palvelun palauttamaa tehtäväluetteloa. Merkkijono muunnetaan objekteja sisältäväksi taulukoksi [JSON.parse][js_json_parse]-metodilla. Tämän jälkeen taulukon kukin objekti käydään läpi [forEach][jsref_forEach] -metodilla siten, että kutsutaan pohjakoodissa olevaa valmista funktiota `createTodoElement`, joka saa parametrikseen ao. objektin.
+
+
+[js_json]: https://www.w3schools.com/js/js_json.asp
+[js_json_parse]: https://www.w3schools.com/js/js_json_parse.asp
+[jsref_forEach]: https://www.w3schools.com/jsref/jsref_forEach.asp
+
+
+Tässä listauksen koodia tulisi muokata siten, että data haetaan palvelusta vastaavalla tavalla kuin *Listauksessa 2* on toteutettu pyyntö *logout* -palveluun. Pyyntö on kuitenkin luonteva toteuttaa `GET`-tyyppisenä (`open`-metodin ensimmäinen parametri).
+
 
 {% highlight javascript %}
 
@@ -163,6 +191,26 @@ function doSelect() {
 
 <small>Listaus 5. Ote pohjakoodin moduulista *todolist.js*</small>
 
+
+`doSelect` -funktion kehitysvaiheessa voi hyödyntää `doSelect.php` -palvelusta pohjakoodissa olevaa versiota, joka palauttaa vakiotietoja (*Listaus 6*). Kun pyyntö tehdään selaimella kirjaamalla sen osoitekenttään `http://localhost:8000/php/doSelect.php`, saadaan selaimen ikkunaan seuraavaa:
+
+~~~
+{
+  "ok": true,
+  "items": [
+    {
+      "id": 3,
+      "task": "Tehtävä 1"
+    },
+    {
+      "id": 6,
+      "task": "Tehtävä 2"
+    }
+  ]
+}
+~~~
+
+Edellistä listausta vastaava merkkijono saadaan `responseText` -ominaisuuden arvoksi tehtäessä pyyntö `XMLHttpRequest` -objektilla.
 
 
 {% highlight php %}
@@ -193,14 +241,40 @@ reply([
 
 <small>Listaus 6. Pohjakoodin *doSelect.php*</small>
 
+`doSelect.php` -moduulin palauttama vakiodata tulisi tässä korvata tietokannasta luetuilla tiedoilla. Ennen tietokantahakua on varmistettava, että käyttäjän tunnus löytyy istunnosta. Jos näin ei ole, moduuli palauttaa tästä *Listauksen 6*  esittämän ilmoituksen. Tietokantavirheeseen pääsee käsiksi [`try -catch`][exceptions] -rakenteella:
+
+[exceptions]: http://php.net/manual/en/language.exceptions.php
 
 
+{% highlight php %}
 
+<?php
+try {
 
+    $pdo = new PDO(TODOLIST);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // ...
+
+} catch (PDOException $Exception) {
+
+    debug($Exception->getMessage());
+
+    reply([
+        'message' => 'db error',
+        'ok' => FALSE
+    ]);
+}
+?>
+
+{% endhighlight %}
 
 
 #### Uuden tehtävän talletus käyttäjän tehtäväluetteloon
+
+
+[Tehtävän 7.2](../tehtava72) sovellus käyttäytyy niin, että uuden tehtävän lisäyksen jälkeen käyttäjän tehtävälistan esittävä sivu ladataan palvelimelta kokonaan uudelleen. Tässä selaimessa olevaa dokumenttia vain muokataan lisäämällä dokumenttiin tietokantaan talletettua riviä vastaavat elementit (*Kuva 2*).
+
 
 
 ![Sekvenssikaavio](../img/ex73sequence-insert.png "Sekvenssikaavio"){: style="display: block; margin: auto; margin-top: 10px; width: 500px;"}
@@ -264,8 +338,25 @@ reply([
 #### Esimerkkeja XMLHttpRequest -objektin käytöstä
 
 
-Sivulla <http://timedu.github.io/weo2016k/form2xhr/> on esimerkki, miten JavaScriptin `XMLHttpRequest`-objektin avulla välitetään tietoa palvelimelle. Tässä tehtävässä tiedot kannattanee välittää siinä muodossa, missä POST-metodilla lähetetyn lomakeenkin data välittyy palvelimelle (`application/x-www-form-urlencoded`).  Web-selainohjelmointi -materiaalissa aihetta käsitellään luvussa [7. Keskustelu palvelimen kanssa](http://web-selainohjelmointi.github.io/#7-Keskustelu-palvelimen-kanssa).
+Sivulla <http://timedu.github.io/weo2016k/form2xhr/> on esimerkki, miten JavaScriptin `XMLHttpRequest`-objektin avulla välitetään tietoa palvelimelle. Tässä tehtävässä tiedot kannattanee välittää siinä muodossa, missä POST-metodilla lähetetyn lomakkeenkin data välittyy palvelimelle (`application/x-www-form-urlencoded`).  Web-selainohjelmointi -materiaalissa aihetta käsitellään luvussa [7. Keskustelu palvelimen kanssa](http://web-selainohjelmointi.github.io/#7-Keskustelu-palvelimen-kanssa).
 
+
+#### reply -funktion revisio
+
+
+{% highlight php %}
+
+<?php
+
+function reply($data) {
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+    die();
+}
+
+?>
+
+{% endhighlight %}
 
 
 
