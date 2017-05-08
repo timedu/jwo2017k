@@ -269,21 +269,28 @@ try {
 
 {% endhighlight %}
 
+<small>Listaus 7.</small>
+
+
 
 #### Uuden tehtävän talletus käyttäjän tehtäväluetteloon
 
 
-[Tehtävän 7.2](../tehtava72) sovellus käyttäytyy niin, että uuden tehtävän lisäyksen jälkeen käyttäjän tehtävälistan esittävä sivu ladataan palvelimelta kokonaan uudelleen. Tässä selaimessa olevaa dokumenttia vain muokataan lisäämällä dokumenttiin tietokantaan talletettua riviä vastaavat elementit (*Kuva 2*).
 
+[Tehtävän 7.2](../tehtava72) sovellus käyttäytyy niin, että uuden tehtävän lisäyksen jälkeen käyttäjän tehtävälistan esittävä sivu ladataan palvelimelta kokonaan uudelleen. Tässä, selaimessa olevaa dokumenttia vain muokataan lisäämällä dokumenttiin tietokantaan talletettua riviä vastaavat elementit (*Kuva 2*).
 
 
 ![Sekvenssikaavio](../img/ex73sequence-insert.png "Sekvenssikaavio"){: style="display: block; margin: auto; margin-top: 10px; width: 500px;"}
 
-
 <small>Kuva 2. Tehtävän talletus tietokantaan</small>
 
 
+Tiedon talletuksen toteuttaa ao. painikkeen click-tapahtumaan sidotu `doInsert` -funktio välittäen pyynnön palvelulle `doInsert.php`. Palvelu palauttaa tietokantaan lisätyn rivin [JSON][js_json]-muotoisena merkkijonona. Pohjakoodin (*Listaus 8*) `doInsert` -funktiossa määtitellyssä `item` -muuttujassa on merkkijono, joka muodoltaan vastaa palvelun palauttamaa tietokantaan talletettua riviä. Funktio muuntaa merkkijojon JavaScript-objektiksi ja muodostaa dokumenttiin tarvittavat elementit kutsumalle pohjakoodissa valmiina olevaa funktiota `createTodoElement` sekä tyhjentää  tekstikentän, johon käyttäjä syöttää lisättävän datan. 
 
+Ratkaisun `doInsert` -funktiossa pyyntö välitetään palvelulle `XMLHttpRequest` -objektille *listauksen 2* esittämään tapaan. Tässä kuitenkin palvelimelle välitetään tietoa, joten `send`-metodin kutsulla tulee olla muodossa `nimi=arvo` oleva parametri (merkkijono). Tämän lisäksi on määriteltävä välitettävän datan muoto: `application/x-www-form-urlencoded`[^3]. (ks. [vastaava esimerkki][esim])
+
+[^3]: Palvelussa vastaanotetaan tämä muoto samoin kuin se tulisi html-lomakkeelta.
+[esim]: http://timedu.github.io/weo2016k/form2xhr/#indexphp
 
 {% highlight javascript %}
 
@@ -301,7 +308,7 @@ function doInsert() {
 
 {% endhighlight %}
 
-<small>Listaus 7. Ote pohjakoodin moduulista *todolist.js*</small>
+<small>Listaus 8. Ote pohjakoodin moduulista *todolist.js*</small>
 
 
 {% highlight php %}
@@ -332,7 +339,7 @@ reply([
 
 {% endhighlight %}
 
-<small>Listaus 8. Pohjakoodin *doInsert.php*</small>
+<small>Listaus 9. Pohjakoodin *doInsert.php*</small>
 
 
 #### Esimerkkeja XMLHttpRequest -objektin käytöstä
@@ -357,6 +364,7 @@ function reply($data) {
 ?>
 
 {% endhighlight %}
+
 
 
 
