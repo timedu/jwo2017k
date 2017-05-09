@@ -311,6 +311,26 @@ function doInsert() {
 <small>Listaus 8. Ote pohjakoodin moduulista *todolist.js*</small>
 
 
+Tämän tehtävän ratkaisun tuottama moduuli `doInsert.php` on tietokantakäsittyn osalta samanlainen kuin [tehtävän 7.2](../tehtava72) vastaava. Moduulit ovat erilaisia siten, että tässä `doInsert.php` palauttaan [JSON][js_json] -muotoisen datan kun taas [edellisessä tehtävässä](../tehtava72) moduuli palauttaa selaimelle ohjeen ladata tietty sivu. 
+
+Pohjakoodin (*Listaus 9*) `doInsert.php` palauttaa seuraavaa[^4]:
+
+[^4]: `item` olisi tässä jondonmukaisempi avain kuin pohjassa oleva `items`, koska arvona on yksi tietokantaan talletettu rivi.
+
+~~~
+{
+  "ok": true,
+  "items": {
+    "id": 9,
+    "task": "Tehtävä 99"
+  }
+}
+~~~
+
+Edellistä listausta vastaava tulos saadaan selaimeen kirjaamalla kehitysympäristössä osoitekenttään `http://localhost:8000/php/doInsert.php`. Jos pyyntö tehdään `XMLHttpRequest` -objektilla, sama saadaan `responseText` -ominaisuuden arvoksi. 
+
+
+
 {% highlight php %}
 
 <?php
