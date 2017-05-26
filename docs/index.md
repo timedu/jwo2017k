@@ -59,9 +59,8 @@ Opintojaksolla ei ole varsinaista luento-opetusta. Kurssin osiin liittyvät teht
 [Kurssin konteksti](konteksti)   
 [Edellinen kurssitoteutus](http://txp.avoinsatakunta.fi/weo/)   
 
-~~~
-sivusto täydentyy ja päivittyy kurssitoteutuksen edetessä
-~~~
+
+[Yhteenveto kurssitoteutuksesta](yhteenveto)
 
 <br/>
 

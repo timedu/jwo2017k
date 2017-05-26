@@ -77,7 +77,7 @@ Kehitysympäristössä Todolist -sivun pyyntö saadaan välitettyä palvelimelle
 
 <small>Listaus 2.</small>
 
-Tehtävän ratkaisussa vakiotiedot korvataan tietokannasta luetuilla tiedoilla. Tehtäväpohjassa määritelty vakio `SELECT_ITEMS` sisältää tässä tarvittava SQl-komennon. 
+Tehtävän ratkaisussa vakiotiedot korvataan tietokannasta luetuilla tiedoilla. Tehtäväpohjassa määritelty vakio `SELECT_ITEMS` sisältää tässä tarvittava SQL-komennon. 
 
 Moduulissa `todolist.php` oleva koodi muodostaa sovelluksen käyttöliittymän. Seuravassa on moduulista ote, jossa käytetään tietokannasta luettuja tietoja sisältävää `$items` -muuttujaa:
 
